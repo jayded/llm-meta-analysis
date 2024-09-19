@@ -1,0 +1,23 @@
+dataset: outcome_type
+templates:
+  0191b865-3b01-71aa-b02b-8f0d03bb4617: !Template
+    id: 0191b865-3b01-71aa-b02b-8f0d03bb4617
+    prompt: |+ 
+      Do NOT provide an explanation.
+      **QUESTION:** Is the outcome of {{outcome}} from a randomized controlled trial a binary or continuous type? 
+      (A) binary
+      (B) continuous
+      (C) unknown - there is insufficient information to make any inference
+      **ANSWER:**
+    name: without-abstract-results
+  0191b865-b93f-7515-a229-c7d948163849: !Template
+    id: 0191b865-b93f-7515-a229-c7d948163849
+    prompt: |+
+      Article: {{abstract_and_results}}
+      Do NOT provide an explanation.
+      **QUESTION:** Based on the article, is the outcome of {{outcome}} from a randomized controlled trial a binary or continuous type?
+      (A) binary
+      (B) continuous
+      (C) unknown - there is insufficient information to make any inference
+      **ANSWER:**
+    name: with-abstract-results
